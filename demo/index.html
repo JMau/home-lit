@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit-html';
+    import '../home-lit.js';
+
+    const user = 'jmau.marquezd@gmail.com';
+    render(
+      html`
+        <home-lit .user=${user}>
+          some more light-dom
+        </home-lit>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
